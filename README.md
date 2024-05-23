@@ -1,16 +1,32 @@
-# mobile_calculator_tassk3
+# Project Title
+Mac Mobile Calculator
+## Description
+The Mac Mobile Calculator is a sleek, intuitive calculator application designed for mobile devices running on the Flutter framework. Inspired by the elegant design of macOS, this calculator offers a seamless and user-friendly experience, allowing users to perform a variety of mathematical operations with ease.
 
-A new Flutter project.
+This app includes basic arithmetic operations, advanced functions, and a history feature that lets users review their previous calculations. The Mac Mobile Calculator is perfect for both casual users and professionals who need a reliable, efficient tool for their daily calculations.
 
-## Getting Started
+## Screenshots
+Include screenshots of your project to give a visual overview.
 
-This project is a starting point for a Flutter application.
+![Screenshot 1](assets/screenshots/screenshot1.png)
 
-A few resources to get you started if this is your first Flutter project:
+## Features
+Basic Arithmetic Operations: Perform addition, subtraction, multiplication, and division with ease.
+Advanced Functions: Access functions like square root, percentage, and more.
+History Feature: Review your previous calculations for reference.
+Elegant Design: Enjoy a clean, macOS-inspired interface that enhances user experience.
+Responsive Layout: Optimized for both portrait and landscape orientations on various mobile devices.
+Dark Mode: Automatically adapts to your device's theme to provide a comfortable viewing experience in any lighting condition.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
+To set up the Mac Mobile Calculator on your local machine, follow these steps:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+# Clone the repository
+git https://github.com/YoussefMohamed7557/macCalculatorFlutter.git
+
+# Navigate into the project directory
+cd macCalculatorFlutter
+
+# Install dependencies
+flutter pub get

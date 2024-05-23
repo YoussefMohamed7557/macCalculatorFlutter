@@ -1,9 +1,9 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:mobile_calculator_tassk3/calculator_button.dart';
 import 'package:mobile_calculator_tassk3/color.dart';
+
+import 'calculator_utilities.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: CalculatorPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -30,15 +31,6 @@ class CalculatorPage extends StatefulWidget {
 }
 
 class _CalculatorPageState extends State<CalculatorPage> {
-  String answerText ='0';
-  double firstNumber = 0.0;
-  double secondNumber = 0.0;
-  double answer = 0.0;
-  String currentOperation = '';
-  String previousOperation = '';
-  bool operationIsNotPressed = true;
-  bool firstOperationPressed = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +54,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Expanded(
-                        child: Text(answerText, style: const TextStyle(color: Colors.white, fontSize: 54, fontWeight: FontWeight.w400),)
+                        child: Text(CalculatorLogic.answerText, style: const TextStyle(color: Colors.white, fontSize: 54, fontWeight: FontWeight.w400),)
                     ),
                   ],
                 ),
@@ -80,23 +72,35 @@ class _CalculatorPageState extends State<CalculatorPage> {
                       children: [
                         CalculatorButton(
                           text: 'c',
-                          onPressed: (){},
+                          onPressed: (){
+                            CalculatorLogic.clearScreen();
+                            setState(() {});
+                          },
                           backgroundColor:
                           ColorsAssets.singleValueOperatorsColor,
                         ),
                         CalculatorButton(
                             text: '+/-',
-                            onPressed: (){},
+                            onPressed: (){
+                              CalculatorLogic.addOrRemoveMinusSignPressed();
+                              setState(() {});
+                            },
                             backgroundColor:
                             ColorsAssets.singleValueOperatorsColor),
                         CalculatorButton(
                             text: '%',
-                            onPressed: percentOperatorPressed ,
+                            onPressed: (){
+                              CalculatorLogic.percentOperatorPressed();
+                              setState(() {});
+                            },
                             backgroundColor:
                             ColorsAssets.singleValueOperatorsColor),
                         CalculatorButton(
                             text: '÷',
-                            onPressed: (){},
+                            onPressed: (){
+                              CalculatorLogic.operationPressed("÷");
+                              setState(() {});
+                            },
                             backgroundColor:
                             ColorsAssets.multiValueOperatorsColor),
                       ],
@@ -108,20 +112,30 @@ class _CalculatorPageState extends State<CalculatorPage> {
                         CalculatorButton(
                             text: '7',
                             onPressed: (){
-                              digitPressed("7");
+                              CalculatorLogic.digitPressed("7");
+                              setState(() {});
                             },
                             backgroundColor: ColorsAssets.numbersColor),
                         CalculatorButton(
                             text: '8',
-                            onPressed: (){},
+                            onPressed: (){
+                              CalculatorLogic.digitPressed("8");
+                              setState(() {});
+                            },
                             backgroundColor: ColorsAssets.numbersColor),
                         CalculatorButton(
                             text: '9',
-                            onPressed: (){},
+                            onPressed: (){
+                              CalculatorLogic.digitPressed("9");
+                              setState(() {});
+                            },
                             backgroundColor: ColorsAssets.numbersColor),
                         CalculatorButton(
                             text: 'x',
-                            onPressed: (){},
+                            onPressed: (){
+                              CalculatorLogic.operationPressed("x");
+                              setState(() {});
+                            },
                             backgroundColor:
                             ColorsAssets.multiValueOperatorsColor),
                       ],
@@ -132,19 +146,31 @@ class _CalculatorPageState extends State<CalculatorPage> {
                       children: [
                         CalculatorButton(
                             text: '4',
-                            onPressed:(){},
+                            onPressed:(){
+                              CalculatorLogic.digitPressed("4");
+                              setState(() {});
+                            },
                             backgroundColor: ColorsAssets.numbersColor),
                         CalculatorButton(
                             text: '5',
-                            onPressed: (){},
+                            onPressed: (){
+                              CalculatorLogic.digitPressed("5");
+                              setState(() {});
+                            },
                             backgroundColor: ColorsAssets.numbersColor),
                         CalculatorButton(
                             text: '6',
-                            onPressed: (){},
+                            onPressed: (){
+                              CalculatorLogic.digitPressed("6");
+                              setState(() {});
+                            },
                             backgroundColor: ColorsAssets.numbersColor),
                         CalculatorButton(
                             text: '-',
-                            onPressed: (){},
+                            onPressed: (){
+                              CalculatorLogic.operationPressed("-");
+                              setState(() {});
+                            },
                             backgroundColor:
                             ColorsAssets.multiValueOperatorsColor),
                       ],
@@ -155,20 +181,32 @@ class _CalculatorPageState extends State<CalculatorPage> {
                       children: [
                         CalculatorButton(
                             text: '1',
-                            onPressed: (){},
+                            onPressed: (){
+                              CalculatorLogic.digitPressed("1");
+                              setState(() {});
+                            },
                             backgroundColor: ColorsAssets.numbersColor),
                         CalculatorButton(
                             text: '2',
-                            onPressed: (){},
+                            onPressed: (){
+                              CalculatorLogic.digitPressed("2");
+                              setState(() {});
+                            },
                             backgroundColor: ColorsAssets.numbersColor),
                         CalculatorButton(
                           text: '3',
-                          onPressed: (){},
+                          onPressed: (){
+                            CalculatorLogic.digitPressed("3");
+                            setState(() {});
+                          },
                           backgroundColor: ColorsAssets.numbersColor,
                         ),
                         CalculatorButton(
                             text: '+',
-                            onPressed: (){},
+                            onPressed: (){
+                              CalculatorLogic.operationPressed("+");
+                              setState(() {});
+                            },
                             backgroundColor:
                             ColorsAssets.multiValueOperatorsColor),
                       ],
@@ -179,18 +217,27 @@ class _CalculatorPageState extends State<CalculatorPage> {
                       children: [
                         CalculatorButton(
                           text: '0',
-                          onPressed: (){},
+                          onPressed: (){
+                            CalculatorLogic.digitPressed("0");
+                            setState(() {});
+                          },
                           flex: 2,
                           backgroundColor: ColorsAssets.numbersColor,
                         ),
                         CalculatorButton(
                           text: '.',
-                          onPressed: (){},
+                          onPressed: (){
+                            CalculatorLogic.dotPressed();
+                            setState(() {});
+                          },
                           backgroundColor: ColorsAssets.numbersColor,
                         ),
                         CalculatorButton(
                           text: '=',
-                          onPressed: (){},
+                          onPressed: (){
+                            CalculatorLogic.equalPressed();
+                            setState(() {});
+                          },
                           backgroundColor:
                           ColorsAssets.multiValueOperatorsColor,
                         ),
@@ -204,66 +251,6 @@ class _CalculatorPageState extends State<CalculatorPage> {
         ],
       ),
     );
-  }
-  void clearScreen() {
-    answerText = '0';
-    //setState(() {});
-  }
-  void addOrRemoveMinusSignPressed(){
-    if (answerText.contains('-')){
-      answerText = answerText.replaceAll('-', '');
-    }else{
-      if(answerText != '0'){
-        String temp = '-';
-        temp = temp + answerText;
-        answerText = temp;
-        // setState(() { });
-      }
-    }
-  }
-
-  void setDefaultValues(){
-    answerText ='0';
-    firstNumber = 0.0;
-    secondNumber = 0.0;
-    answer = 0.0;
-    currentOperation = '';
-    previousOperation = '';
-    operationIsNotPressed = true;
-    firstOperationPressed = false;
-    // setState(() { });
-  }
-
-  String getAnswerFrom({required String firstNumber,required String secondNumber,required String operator}) {
-    double answer = 0.0;
-    double fn = double.parse(firstNumber);
-    double sn = double.parse(secondNumber);
-    switch (operator) {
-      case '+':
-        answer = fn + sn;
-        break;
-      case '-':
-        answer = fn - sn;
-        break;
-      case 'x':
-        answer = fn * sn;
-        break;
-      case '÷':
-        answer = fn / sn;
-        break;
-    }
-    return answer.toString();
-  }
-  void digitPressed(String btnText){
-    answerText += btnText;
-    setState(() {}); 
-  }
-
-  void percentOperatorPressed(){
-    double number = double.parse(answerText);
-    answer = number / 100;
-    answerText = answer.toString();
-    //  setState(() {});
   }
 
 }
