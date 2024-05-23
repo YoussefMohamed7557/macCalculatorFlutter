@@ -6,9 +6,8 @@ The Mac Mobile Calculator is a sleek, intuitive calculator application designed 
 This app includes basic arithmetic operations, advanced functions, and a history feature that lets users review their previous calculations. The Mac Mobile Calculator is perfect for both casual users and professionals who need a reliable, efficient tool for their daily calculations.
 
 ## Screenshots
-Include screenshots of your project to give a visual overview.
 
-![Screenshot 1](assets/screenshots/screenshot1.png)
+![Screen Shot](D:\YOUSSF\Flutter%20Tasks%20and%20labs\mobile_calculator_tassk3\assets\screenshots\screenshot1.png)
 
 ## Features
 Basic Arithmetic Operations: Perform addition, subtraction, multiplication, and division with ease.
