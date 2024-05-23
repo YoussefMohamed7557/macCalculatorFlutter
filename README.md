@@ -12,11 +12,6 @@ Include screenshots of your project to give a visual overview.
 
 ## Features
 Basic Arithmetic Operations: Perform addition, subtraction, multiplication, and division with ease.
-Advanced Functions: Access functions like square root, percentage, and more.
-History Feature: Review your previous calculations for reference.
-Elegant Design: Enjoy a clean, macOS-inspired interface that enhances user experience.
-Responsive Layout: Optimized for both portrait and landscape orientations on various mobile devices.
-Dark Mode: Automatically adapts to your device's theme to provide a comfortable viewing experience in any lighting condition.
 
 ## Installation
 To set up the Mac Mobile Calculator on your local machine, follow these steps:
