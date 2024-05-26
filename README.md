@@ -8,7 +8,7 @@ This app includes basic arithmetic operations, advanced functions, and a history
 ## Screenshots
 Include screenshots of your project to give a visual overview.
 
-![Screenshot 1](assets/screenshots/screenshot1.png)
+![Screenshot 1](asset/screenshots/screenshot1.png)
 
 ## Features
 Basic Arithmetic Operations: Perform addition, subtraction, multiplication, and division with ease.
