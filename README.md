@@ -7,7 +7,7 @@ This app includes basic arithmetic operations, advanced functions, and a history
 
 ## Screenshots
 
-![Screen Shot](D:\YOUSSF\Flutter%20Tasks%20and%20labs\mobile_calculator_tassk3\assets\screenshots\screenshot1.png)
+![Screen Shot](assets\screenshots\screenshot1.png)
 
 ## Features
 Basic Arithmetic Operations: Perform addition, subtraction, multiplication, and division with ease.
